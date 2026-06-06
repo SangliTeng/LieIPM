@@ -1,0 +1,39 @@
+# Build directories
+build/
+*/build/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+CTestTestfile.cmake
+compile_commands.json
+
+# Compiled objects and libraries
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables and debug symbols
+*.exe
+*.out
+*.app
+*.pdb
+
+# Generated dependency files
+*.d
+
+# Temporary/editor files
+*.swp
+*.swo
+*~
+.DS_Store
