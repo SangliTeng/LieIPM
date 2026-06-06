@@ -37,5 +37,3 @@ compile_commands.json
 *.swo
 *~
 .DS_Store
-
-*.mat

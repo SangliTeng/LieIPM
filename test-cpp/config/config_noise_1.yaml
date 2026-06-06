@@ -1,0 +1,33 @@
+input_file:   ../data/converged_uniform.mat
+output_file:  ../data/noisy_uniform_1.mat
+save_sol:     false
+input_var:    cpp_data_all
+# State layout per timestep: [R(9), p(3), F(9), v(3)] = 24 elements
+# Trajectory: 21 timesteps => 504 state elements
+# Inputs: 4 x 20 = 80 elements
+n_state_steps: 21
+n_input_steps: 20
+state_dim:     24   # per step: 9+3+9+3
+input_dim:     4    # per step
+
+perturbation:
+  delta_R:  0.1      # SO(3) rotation noise std  (rad)
+  delta_p:  0.1   # position noise std         (m)
+  delta_F:  0.1   # SO(3) frame noise std      (rad)
+  delta_v:  0.1   # velocity noise std         (m/s)
+  delta_u:  0.1   # input noise std
+  delta_y:  0.1   # equality multiplier noise std
+  delta_z:  0.1   # inequality multiplier log-noise std (multiplicative)
+  delta_s:  0.1   # slack log-noise std         (multiplicative)
+  delta_mu: 0.1   # barrier param log-noise std (multiplicative)
+trivial_dual:
+  enable:  false
+  y_val:   0.1    # fill y (equality multiplier) with this constant
+  z_val:   0.1    # fill z (inequality multiplier) with this constant
+  s_val:   0.1    # fill s (slack) with this constant
+  mu_val:  0.1    # fill mu (barrier param) with this constant
+ipm:
+  iter_max:                      1000
+  overall_kkt_acceptance_rate:   1.0e-6
+  barrier_kkt_acceptance_rate:   1.0e-3
+  time_limit:                    10.0

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd ../test-cpp/build
+
+# # ── Lie IPM ──────────────────────────────────────────────────────────────────
+for cfg in \
+    ../config/config.yaml \
+    ../config/config_noise_1.yaml \
+    ../config/config_noise_2.yaml \
+    ../config/config_noise_3.yaml
+do
+    echo "======== $cfg ========" && taskset -c 0 ./exp_traj "$cfg"
+done
