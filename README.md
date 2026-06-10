@@ -65,3 +65,33 @@ make -j
 cd ..
 bash ./run_all
 ```
+
+---
+
+## Citation
+
+Please cite our work as follows.
+
+```bibtex
+@INPROCEEDINGS{TengS-RSS-25,
+	AUTHOR    = {Sangli Teng AND Tzu-Yuan Lin AND William A. Clark AND Ram Vasudevan AND Maani Ghaffari},
+	TITLE     = {{Riemannian Direct Trajectory Optimization of Rigid Bodies on Matrix Lie Groups}},
+	BOOKTITLE = {Proceedings of Robotics: Science and Systems},
+	YEAR      = {2025},
+	ADDRESS   = {LosAngeles, CA, USA},
+	MONTH     = {June},
+	DOI       = {10.15607/RSS.2025.XXI.120}
+}
+```
+
+```bibtex
+@misc{teng2026lieipmliegroupinterior,
+	  title={LieIPM: Lie Group Interior Point Method for Direct Trajectory Optimization of Rigid Bodies},
+	  author={Sangli Teng and Ruiqi Zhang and Tzu-Yuan Lin and William A Clark and Mark Mueller and Ram Vasudevan and Maani Ghaffari and Koushil Sreenath},
+	  year={2026},
+	  eprint={2606.10579},
+	  archivePrefix={arXiv},
+	  primaryClass={cs.RO},
+	  url={https://arxiv.org/abs/2606.10579},
+}
+```
